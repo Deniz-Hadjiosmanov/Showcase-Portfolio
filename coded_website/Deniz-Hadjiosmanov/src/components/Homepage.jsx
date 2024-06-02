@@ -1,9 +1,16 @@
 import React from "react";
 import './Homepage.css';
 import DenizPhoto from '../assets/Deniz-photo.svg';
+import Navigation from '../assets/Navigation.svg';
 
 function Homepage() {
     return (
+    <>
+    <div class="navbar">
+        <a href="#home">PROJECTS</a>
+        <a href="#news">ABOUT</a>
+        <a href="#contact" id="contact-navigation-btn">CONTACT</a>
+    </div>
     <div id="home-background">
         <img src={DenizPhoto} alt="My photo" id="Deniz-photo"/>
         <div id="Home-page-description">
@@ -13,6 +20,7 @@ function Homepage() {
             <button id="see-my-work-button">See my work</button>
         </div>
     </div>
+    </>
     )
 }
 
