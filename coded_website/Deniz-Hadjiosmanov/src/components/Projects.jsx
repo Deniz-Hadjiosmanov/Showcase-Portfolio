@@ -1,18 +1,73 @@
 import React from "react";
 import './Projects.css';
+import Petica from '../assets/petica.svg';
+import Maike from '../assets/maike.svg';
+import Bierens from '../assets/bierens.svg';
+import Coding from '../assets/coding.svg';
 
 function Projectsection() {
     return (
     <>
     <section id="project-section-container">
-        <div>
+        <div id="titles">
             <p id="my-picks">My Picks</p>
             <p id="projects">Projects</p>
         </div>
         <div id="projects-container">
-            <div id="project-1">
-                <img></img>
-                <p>Digital Pet Suggestor</p>
+            <div className="project-card">
+            <img src={Petica} alt="Petica" id="petica"/>
+                <div className="skills-used">
+                    <p className="project-title">Digital Pet Suggestor</p>
+
+                    <div className="skill">
+                        <img src={Coding} alt="Coding"/>
+                        <p>Double Diamond</p>
+                    </div>
+                    <div className="skill">
+                        <img src={Coding} alt="Coding"/>
+                        <p>JavaScript</p>
+                        <p className="btn-see-the-project">See the project</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div className="project-card">
+            <img src={Bierens} alt="Petica" id="petica"/>
+                <div className="skills-used">
+                    <p className="project-title">Referral Program</p>
+
+                    <div className="skill">
+                        <img src={Coding} alt="Coding"/>
+                        <p>Water-scrum-fall</p>
+                    </div>
+                    <div className="skill">
+                        <img src={Coding} alt="Coding"/>
+                        <p>React & Vite</p>
+                        <p className="btn-see-the-project">See the project</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div className="project-card">
+            <img src={Maike} alt="Petica" id="petica"/>
+                <div className="skills-used">
+                    <p className="project-title">Promoting a Potential Singer</p>
+
+                    <div className="skill">
+                        <img src={Coding} alt="Coding"/>
+                        <p>Waterfall</p>
+                    </div>
+                    <div className="skill">
+                        <img src={Coding} alt="Coding"/>
+                        <p>JavaScript</p>
+                        <p className="btn-see-the-project">See the project</p>
+                    </div>
+                    
+                </div>
 
             </div>
         </div>

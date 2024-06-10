@@ -13,7 +13,12 @@
 #project-section-container {
     display: flex;
     flex-direction: column;
-    margin: 0 120px 0 120px;
+    gap: 90px;
+    margin: 0 40px 0 30px 
+}
+
+#titles {
+    margin: 0 0 0 0;
 }
 
 #my-picks {
@@ -34,9 +39,36 @@
 #projects-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-#project-1 {
+.project-card {
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 380px
+}
+
+.project-title {
+    font-family: var(--font-epilogue);
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.skills-used {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 30px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    font-family: var(--font-epilogue);
+    font-weight: 500;
+}
+
+.btn-see-the-project {
+    border-bottom: var(--color-yellow) solid 1px;
 }
