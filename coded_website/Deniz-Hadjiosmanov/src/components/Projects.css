@@ -14,21 +14,21 @@
     display: flex;
     flex-direction: column;
     gap: 90px;
-    margin: 0 40px 0 30px 
+    padding: 0 80px 0 70px;
 }
 
-#titles {
-    margin: 0 0 0 0;
+#project-section-titles {
+    margin: 0;
 }
 
-#my-picks {
+.sub-title {
     font-family: var(--font-epilogue);
     color: var(--color-yellow);
     font-weight: 600;
     font-size: 24px;
 }
 
-#projects {
+.title {
     font-family: var(--font-epilogue);
     font-weight: bold;
     font-size: 42px;
@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0 0 120px 0;
 }
 
 .project-card {

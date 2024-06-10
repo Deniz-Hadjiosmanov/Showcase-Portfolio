@@ -9,9 +9,9 @@ function Projectsection() {
     return (
     <>
     <section id="project-section-container">
-        <div id="titles">
-            <p id="my-picks">My Picks</p>
-            <p id="projects">Projects</p>
+        <div id="project-section-titles">
+            <p className="sub-title">My Picks</p>
+            <p className="title">Projects</p>
         </div>
         <div id="projects-container">
             <div className="project-card">
