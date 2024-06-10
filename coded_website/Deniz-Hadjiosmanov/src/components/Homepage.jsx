@@ -3,7 +3,7 @@ import './Homepage.css';
 import DenizPhoto from '../assets/Deniz-photo.svg';
 import Navigation from '../assets/Navigation.svg';
 
-function Homepage() {
+function Homesection() {
     return (
     <>
     <div class="navbar">
@@ -24,4 +24,4 @@ function Homepage() {
     )
 }
 
-export default Homepage;
+export default Homesection;

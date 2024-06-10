@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Colors */
+    --color-black: #023047;
+    --color-yellow: #FFB703;
+    --color-orange: #FB8500;
+    --color-white: #fcfcfc;
+    /* Fonts */
+    --font-epilogue: "Epilogue";
+}
+
+#project-section-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 120px 0 120px;
+}
+
+#my-picks {
+    font-family: var(--font-epilogue);
+    color: var(--color-yellow);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#projects {
+    font-family: var(--font-epilogue);
+    font-weight: bold;
+    font-size: 42px;
+    margin: 0;
+    line-height: 16px;
+}
+
+#projects-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#project-1 {
+    display: flex;
+    flex-direction: column;
+}

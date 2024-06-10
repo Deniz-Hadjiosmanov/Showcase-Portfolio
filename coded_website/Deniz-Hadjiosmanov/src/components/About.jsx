@@ -1,7 +1,7 @@
 import React from "react";
 import './About.css';
 
-function Aboutpage() {
+function Aboutsection() {
     return (
     <>
     
@@ -9,4 +9,4 @@ function Aboutpage() {
     )
 }
 
-export default Aboutpage;
+export default Aboutsection;
