@@ -1,16 +1,21 @@
 import React from "react";
 import './Homepage.css';
+
+// Importing the necessary photos
 import DenizPhoto from '../assets/Deniz-photo.svg';
 import Navigation from '../assets/Navigation.svg';
 
 function Homesection() {
     return (
     <>
+    {/* Navigation bar */}
     <div class="navbar">
         <a href="#home">PROJECTS</a>
         <a href="#news">ABOUT</a>
         <a href="#contact" id="contact-navigation-btn">CONTACT</a>
     </div>
+
+    {/* Content of the Home section */}
     <div id="home-background">
         <img src={DenizPhoto} alt="My photo" id="Deniz-photo"/>
         <div id="Home-page-description">

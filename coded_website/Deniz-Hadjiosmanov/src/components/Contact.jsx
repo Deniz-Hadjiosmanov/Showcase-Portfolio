@@ -1,10 +1,12 @@
 import React from "react";
+import './Contact.css';
+
+// Importing the necessary photos
 import Instagram from '../assets/instagram.png';
 import Linkedin from '../assets/linkedin.png';
 import Email from '../assets/email.png';
 import Copy from '../assets/copy.png';
 import Footer from '../assets/footer.svg';
-import './Contact.css';
 
 function Contactsection() {
     return (
@@ -15,6 +17,7 @@ function Contactsection() {
             <p id="creative-clarification">Let’s make something new, different and more meaningful or make things more visual or conceptual!</p>
         </div>
 
+        {/* Displaying the links for social media */}
         <div id="social-media-container">
             <div className="social-media-box">
                 <img src={Linkedin} alt="Linkedin"/>

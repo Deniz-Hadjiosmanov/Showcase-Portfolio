@@ -1,5 +1,7 @@
 import React from "react";
 import './Projects.css';
+
+// Importing the necessary photos
 import Petica from '../assets/petica.svg';
 import Maike from '../assets/maike.svg';
 import Bierens from '../assets/bierens.svg';
@@ -8,11 +10,14 @@ import Coding from '../assets/coding.svg';
 function Projectsection() {
     return (
     <>
+
     <section id="project-section-container">
         <div id="project-section-titles">
             <p className="sub-title">My Picks</p>
             <p className="title">Projects</p>
         </div>
+
+        {/* Displaying the projects */}
         <div id="projects-container">
             <div className="project-card">
             <img src={Petica} alt="Petica" id="petica"/>

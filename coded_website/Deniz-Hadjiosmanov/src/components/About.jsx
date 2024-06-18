@@ -1,6 +1,8 @@
 import React from "react";
-import Cup from '../assets/cup.png';
 import './About.css';
+
+// Importing the necessary photos
+import Cup from '../assets/cup.png';
 
 function Aboutsection() {
     return (
@@ -18,6 +20,8 @@ function Aboutsection() {
             <p className="skill-box-text">In November 2022 I won 1st place in a Human Interaction competition in TU/e.</p>
         </div>
         </div>
+
+        {/* Displaying my skills */}
         <div id="about-section-bottom-row">
 
             <div className="about-skill-box">

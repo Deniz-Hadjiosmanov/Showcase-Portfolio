@@ -7,7 +7,8 @@ import Contact from './components/Contact'
 import './App.css'
 
 function App() {
-
+  
+  // Building my portfolio website using React components
   return (
     <>
       <Home/>

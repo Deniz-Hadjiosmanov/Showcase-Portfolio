@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap'); /* Importing the Epilogue font */
 
 :root {
     /* Colors */
@@ -9,6 +9,9 @@
     /* Fonts */
     --font-epilogue: "Epilogue";
 }
+
+
+/* Content of the About section */
 
 #about-section-container {
     display: flex;
@@ -60,6 +63,9 @@
 c {
     color: var(--color-yellow);
 }
+
+
+/* Styling the cards with my skills */
 
 .about-skill-box {
     display: flex;
