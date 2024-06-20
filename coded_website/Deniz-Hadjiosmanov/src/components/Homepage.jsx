@@ -3,7 +3,6 @@ import './Homepage.css';
 
 // Importing the necessary photos
 import DenizPhoto from '../assets/Deniz-photo.svg';
-import Navigation from '../assets/Navigation.svg';
 
 function Homesection() {
 
@@ -11,29 +10,10 @@ function Homesection() {
       const scrollToProjects = () => {
         const section = document.getElementById('project-section-container'); 
         section.scrollIntoView({ behavior: 'smooth' }); 
-      };
-
-      // Function for scrolling to About section
-      const scrollToAbout = () => {
-        const section = document.getElementById('about-section-container'); 
-        section.scrollIntoView({ behavior: 'smooth' }); 
-      };
-
-      // Function for scrolling to Contact section
-      const scrollToContact = () => {
-        const section = document.getElementById('contact-section-container'); 
-        section.scrollIntoView({ behavior: 'smooth' }); 
-      };
+      }
 
     return (
     <>
-    {/* Navigation bar */}
-    <div class="navbar">
-        <div onClick={scrollToProjects}>PROJECTS</div>
-        <div onClick={scrollToAbout}>ABOUT</div>
-        <div id="contact-navigation-btn" onClick={scrollToContact}>CONTACT</div>
-    </div>
-
     {/* Content of the Home section */}
     <div id="home-background">
         <img src={DenizPhoto} alt="My photo" id="Deniz-photo"/>
