@@ -6,13 +6,32 @@ import DenizPhoto from '../assets/Deniz-photo.svg';
 import Navigation from '../assets/Navigation.svg';
 
 function Homesection() {
+
+      // Function for scrolling to Project section
+      const scrollToProjects = () => {
+        const section = document.getElementById('project-section-container'); 
+        section.scrollIntoView({ behavior: 'smooth' }); 
+      };
+
+      // Function for scrolling to About section
+      const scrollToAbout = () => {
+        const section = document.getElementById('about-section-container'); 
+        section.scrollIntoView({ behavior: 'smooth' }); 
+      };
+
+      // Function for scrolling to Contact section
+      const scrollToContact = () => {
+        const section = document.getElementById('contact-section-container'); 
+        section.scrollIntoView({ behavior: 'smooth' }); 
+      };
+
     return (
     <>
     {/* Navigation bar */}
     <div class="navbar">
-        <a href="#home">PROJECTS</a>
-        <a href="#news">ABOUT</a>
-        <a href="#contact" id="contact-navigation-btn">CONTACT</a>
+        <div onClick={scrollToProjects}>PROJECTS</div>
+        <div onClick={scrollToAbout}>ABOUT</div>
+        <div id="contact-navigation-btn" onClick={scrollToContact}>CONTACT</div>
     </div>
 
     {/* Content of the Home section */}
@@ -22,7 +41,7 @@ function Homesection() {
             <p className="description-paragraph" id="I-am-deniz">Hey, I am Deniz</p>
             <p className="description-paragraph" id="I-am-uxui-designer">I am a <c id="UXUI-designer">UX/UI designer</c></p>
             <p className="description-paragraph" id="my-descriptioon">I’m a 22-year-old ICT & Media Design student with a passion for design and creating digital products.</p>
-            <button id="see-my-work-button">See my work</button>
+            <div id="see-my-work-button" onClick={scrollToProjects}>See my work</div>
         </div>
     </div>
     </>

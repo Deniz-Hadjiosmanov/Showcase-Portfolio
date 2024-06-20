@@ -27,17 +27,21 @@
     background-size: 530px 90px;
   }
   
-  .navbar a {
+  .navbar div {
     color: var(--color-black);
     text-align: center;
     text-decoration: none;
+    background-color: transparent;
     font-size: 17px;
     font-family: var(--font-epilogue);
     font-weight: bold;
+    cursor: pointer;
   }
   
-  .navbar a:hover {
+  .navbar div:hover {
     color: var(--color-white);
+    border-color: transparent;
+    transition: 0.4s;
   }
 
   #contact-navigation-btn {
@@ -98,8 +102,15 @@
 }
 
 #see-my-work-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color-yellow);
     border-radius: 8px;
     margin: 60px 0 0 0;
     width: 140px;
+    height: 35px;
+    font-family: var(--font-epilogue);
+    font-weight: 600;
+    cursor: pointer;
 }
