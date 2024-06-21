@@ -2,7 +2,11 @@ import React from "react";
 import './About.css';
 
 // Importing the necessary photos
-import Cup from '../assets/cup.png';
+import Cup from "../assets/cup.png";
+import UxResearch from "../assets/ux-research.png";
+import UxUiDesign from "../assets/ux-ui-design.png";
+import WebDevelopment from "../assets/web-development.png";
+import MediaProduction from "../assets/media-production.png";
 
 function Aboutsection() {
     return (
@@ -17,7 +21,7 @@ function Aboutsection() {
         <div className="about-skill-box">
             <img src={Cup} alt="Cup"/>
             <p className="skill-box-title">User Interaction</p>
-            <p className="skill-box-text">In November 2022 I won 1st place in a Human Interaction competition in TU/e.</p>
+            <p className="skill-box-text">In November 2022 I won <b>1st place</b> in a Human Interaction competition in TU/e.</p>
         </div>
         </div>
 
@@ -25,24 +29,24 @@ function Aboutsection() {
         <div id="about-section-bottom-row">
 
             <div className="about-skill-box">
-                <img src={Cup} alt="Cup"/>
+                <img src={UxResearch} alt="Cup"/>
                 <p className="skill-box-title">UX Research</p>
-                <p className="skill-box-text">In November 2022 I won 1st place in a Human Interaction competition in TU/e.</p>
+                <p className="skill-box-text"><b>Defining</b> the target audience and <b>analysing</b> the problem to produce a viable solution.</p>
             </div>
             <div className="about-skill-box">
-                <img src={Cup} alt="Cup"/>
+                <img src={UxUiDesign} alt="Cup"/>
                 <p className="skill-box-title">UX/UI Design</p>
-                <p className="skill-box-text">In November 2022 I won 1st place in a Human Interaction competition in TU/e.</p>
+                <p className="skill-box-text">Complete <b>mapping</b> of the user experience with recommendations for the future.</p>
             </div>
             <div className="about-skill-box">
-                <img src={Cup} alt="Cup"/>
+                <img src={WebDevelopment} alt="Cup"/>
                 <p className="skill-box-title">Web Development</p>
-                <p className="skill-box-text">In November 2022 I won 1st place in a Human Interaction competition in TU/e.</p>
+                <p className="skill-box-text">Component-based development and working with various React libraries.</p>
             </div>
             <div className="about-skill-box">
-                <img src={Cup} alt="Cup"/>
+                <img src={MediaProduction} alt="Cup"/>
                 <p className="skill-box-title">Media Production</p>
-                <p className="skill-box-text">In November 2022 I won 1st place in a Human Interaction competition in TU/e.</p>
+                <p className="skill-box-text"><b>2 years of experience</b> in the Media Production industry as a videographer and a photographer.</p>
             </div>
 
         </div>
