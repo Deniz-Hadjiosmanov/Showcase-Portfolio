@@ -28,13 +28,13 @@ function NavigationBar() {
         const aboutSection = document.getElementById('about-section-container');
         const contactSection = document.getElementById('contact-section-container');
 
-        const scrollPosition = window.scrollY + window.innerHeight / 2;
+        const currentScrollPosition = window.scrollY + window.innerHeight / 2; // Detecting the current scroll position of the user
         
-        if (scrollPosition >= contactSection.offsetTop) {
+        if (currentScrollPosition >= contactSection.offsetTop) {
             setActiveSection('Contact');
-        } else if (scrollPosition >= aboutSection.offsetTop) {
+        } else if (currentScrollPosition >= aboutSection.offsetTop) {
             setActiveSection('About');
-        } else if (scrollPosition >= projectsSection.offsetTop) {
+        } else if (currentScrollPosition >= projectsSection.offsetTop) {
             setActiveSection('Projects');
         } else {
             setActiveSection('');

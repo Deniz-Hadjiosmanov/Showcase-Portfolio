@@ -45,6 +45,7 @@
 #projects-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 0 120px 0;
 }
@@ -53,13 +54,14 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 380px
+    width: 420px
 }
 
 .project-title {
     font-family: var(--font-epilogue);
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 600;
+    margin: 15px 0 12px 30px;
 }
 
 .skills-used {
@@ -71,11 +73,49 @@
 .skill {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 12px;
     font-family: var(--font-epilogue);
     font-weight: 500;
+    font-size: 15px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 6px 0;
+}
+
+.btn-container-see-the-project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 12px;
+    border-bottom: var(--color-yellow) solid 1px;
+    margin: 0 22px 12px 0;
+    cursor: pointer;
+}
+
+.btn-container-see-the-project:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.4s;
 }
 
 .btn-see-the-project {
-    border-bottom: var(--color-yellow) solid 1px;
+    align-self: flex-end;
+    font-family: var(--font-epilogue);
+    font-weight: bold;
+    margin: 0;
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.btn-see-the-project:hover {
+    color: var(--color-black);
+}
+
+.btn-arrow {
+    margin: 0 0 0 8px;
 }

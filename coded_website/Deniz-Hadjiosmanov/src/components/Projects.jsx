@@ -1,11 +1,16 @@
 import React from "react";
 import './Projects.css';
 
-// Importing the necessary photos
+// Importing the necessary images
 import Petica from '../assets/petica.svg';
 import Maike from '../assets/maike.svg';
 import Bierens from '../assets/bierens.svg';
-import Coding from '../assets/coding.svg';
+import DoubleDiamond from '../assets/double-diamond.svg';
+import JavaScriptLogo from '../assets/java-script-logo.svg';
+import ReactLogo from '../assets/react-logo.svg';
+import Waterfall from '../assets/waterfall.svg';
+import Arrow from '../assets/arrow-see-project.svg';
+
 
 function Projectsection() {
     return (
@@ -19,61 +24,67 @@ function Projectsection() {
 
         {/* Displaying the projects */}
         <div id="projects-container">
-            <div className="project-card">
+        <div className="project-card">
             <img src={Petica} alt="Petica" id="petica"/>
+            <p className="project-title">Digital Pet Suggestor</p>
+            <div className="card-text">
                 <div className="skills-used">
-                    <p className="project-title">Digital Pet Suggestor</p>
-
                     <div className="skill">
-                        <img src={Coding} alt="Coding"/>
+                        <img src={DoubleDiamond} alt="Double Diamond"/>
                         <p>Double Diamond</p>
                     </div>
                     <div className="skill">
-                        <img src={Coding} alt="Coding"/>
+                        <img src={JavaScriptLogo} alt="JavaScript"/>
                         <p>JavaScript</p>
-                        <p className="btn-see-the-project">See the project</p>
                     </div>
-                    
                 </div>
-
+                <div className="btn-container-see-the-project" href="https://github.com/Deniz-Hadjiosmanov/Petica">
+                    <a href="https://github.com/Deniz-Hadjiosmanov/Petica" target="blank" className="btn-see-the-project">See the project <img src={Arrow} alt="Arrow" className="btn-arrow"/></a>
+                </div>
+                
+            </div>
             </div>
 
             <div className="project-card">
-            <img src={Bierens} alt="Petica" id="petica"/>
+            <img src={Bierens} alt="Bierens" id="petica"/>
+            <p className="project-title">Referral Program</p>
+            <div className="card-text">
                 <div className="skills-used">
-                    <p className="project-title">Referral Program</p>
-
                     <div className="skill">
-                        <img src={Coding} alt="Coding"/>
+                        <img src={Waterfall} alt="Waterfall-scrum-fall"/>
                         <p>Water-scrum-fall</p>
                     </div>
                     <div className="skill">
-                        <img src={Coding} alt="Coding"/>
-                        <p>React & Vite</p>
-                        <p className="btn-see-the-project">See the project</p>
+                        <img src={ReactLogo} alt="React"/>
+                        <p>React + Vite</p>
                     </div>
-                    
                 </div>
-
+                <div className="btn-container-see-the-project">
+                <a href="https://github.com/aleksandarafk/BierensReferralProgram" target="blank" className="btn-see-the-project">See the project <img src={Arrow} alt="Arrow" className="btn-arrow"/></a>
+                </div>
+                
+            </div>
             </div>
 
             <div className="project-card">
-            <img src={Maike} alt="Petica" id="petica"/>
+            <img src={Maike} alt="Singer" id="petica"/>
+            <p className="project-title">Promoting a Potential Singer</p>
+            <div className="card-text">
                 <div className="skills-used">
-                    <p className="project-title">Promoting a Potential Singer</p>
-
                     <div className="skill">
-                        <img src={Coding} alt="Coding"/>
+                        <img src={Waterfall} alt="Waterfall"/>
                         <p>Waterfall</p>
                     </div>
                     <div className="skill">
-                        <img src={Coding} alt="Coding"/>
+                        <img src={JavaScriptLogo} alt="JavaScript"/>
                         <p>JavaScript</p>
-                        <p className="btn-see-the-project">See the project</p>
                     </div>
-                    
                 </div>
-
+                <div className="btn-container-see-the-project">
+                <a href="https://github.com/Deniz-Hadjiosmanov/Maaike-Girardin-s-Website" target="blank" className="btn-see-the-project">See the project <img src={Arrow} alt="Arrow" className="btn-arrow"/></a>  
+                </div>
+                
+            </div>
             </div>
         </div>
         
