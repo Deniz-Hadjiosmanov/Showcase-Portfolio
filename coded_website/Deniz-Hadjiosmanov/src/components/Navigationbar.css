@@ -44,6 +44,11 @@
     transition: 0.4s;
   }
 
+  .navbar div.active {
+    color: var(--color-white); 
+    transition: 0.4s;
+}
+
   #contact-navigation-btn {
     margin-right: 80px;
   }
