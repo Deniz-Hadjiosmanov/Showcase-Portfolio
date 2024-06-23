@@ -19,34 +19,36 @@ In order to implement my website, I used Vite in combination with React. The rea
 
 In order to open my portfolio website offline, do the steps below:
 
-1. Clone the Git project in a folder of your laptop using the following command:
+1. Go to the folder of your laptop where you want to have the website.
+
+2. Then, open the terminal and clone the Git project in the folder of your laptop using the following command:
 
 ```
 git clone https://git.fhict.nl/I477928/showcase-portfolio-deniz-hadjiosmanov.git
 ```
-2. Open the terminal and navigate to the folder "coded_website" using the following command:
+3. Navigate to the folder "coded_website" using the following command on the terminal:
 
 ```
 cd coded_website
 ```
 
-3. Then, navigate to the folder "Deniz-Hadjiosmanov" using the following command:
+4. Then, navigate to the folder "Deniz-Hadjiosmanov" using the following command on the terminal:
 
 ```
 cd Deniz-Hadjiosmanov
 ```
-4. After that, to install the necessary dependencies, run the following command:
+5. After that, to install the necessary dependencies, run the following command on the terminal:
 
 ```
 npm install
 ```
 
-5. Finally, to open the website, run the following command:
+6. Finally, to open the website, run the following command on the terminal:
 
 ```
 npm run dev
 ```
-6. Click on the link that appears on the terminal and you will have the portfolio website open on your device.
+7. Click on the link that appears on the terminal and you will have the portfolio website open on your device.
 
 
 ## Purpose of my Portfolio Website
