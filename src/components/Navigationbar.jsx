@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
+import PortfolioLogo from '../assets/portfolio-website-logo.svg';
 import './Navigationbar.css';
 
 function NavigationBar() {
     const [activeSection, setActiveSection] = useState('');
+
+    // Function for scrolling to Home section
+    const scrollToHome = () => {
+        const section = document.getElementById('home-background'); 
+        section.scrollIntoView({ behavior: 'smooth' });
+    };
 
     // Function for scrolling to Project section
     const scrollToProjects = () => {
@@ -52,9 +59,13 @@ function NavigationBar() {
     <>
         {/* Navigation bar */}
         <div className="navbar">
-            <div onClick={scrollToProjects} className={activeSection === 'Projects' ? 'active' : ''}> PROJECTS </div>
-            <div onClick={scrollToAbout} className={activeSection === 'About' ? 'active' : ''}> ABOUT </div>
-            <div onClick={scrollToContact} className={activeSection === 'Contact' ? 'active' : ''} id="contact-navigation-btn"> CONTACT </div>
+            <div onClick={scrollToHome} className={activeSection === 'Projects' ? 'active' : ''} id="container-my-logo"> <img src={PortfolioLogo} alt="Logo" id="my-logo"/> </div>
+            <div id="container-nav-btns">
+                <div onClick={scrollToProjects} className={activeSection === 'Projects' ? 'active' : ''}> PROJECTS </div>
+                <div onClick={scrollToAbout} className={activeSection === 'About' ? 'active' : ''}> ABOUT </div>
+                <div onClick={scrollToContact} className={activeSection === 'Contact' ? 'active' : ''} id="contact-navigation-btn"> CONTACT </div>
+            </div>
+            
         </div>
     </>
     );

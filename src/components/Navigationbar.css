@@ -13,7 +13,6 @@
 .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
     gap: 44px;
     background-color: var(--color-white);
@@ -51,4 +50,26 @@
 
   #contact-navigation-btn {
     margin-right: 80px;
+  }
+
+  #container-my-logo {
+    margin: 0 0 0 40px;
+  }
+
+  #container-my-logo:hover {
+    -webkit-transform: scale(1.07);
+    transform: scale(1.07);
+  }
+
+  #container-nav-btns {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    gap: 44px;
+    right: 0;
+  }
+
+  #my-logo {
+    width: 120px;
+    height: auto;
   }
