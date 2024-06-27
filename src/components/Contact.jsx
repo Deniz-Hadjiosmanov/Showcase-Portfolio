@@ -47,7 +47,7 @@ function Contactsection() {
     <section id="contact-section-container">
         <div id="contact-titles-container">
             <p id="creative">Let’s Go <c>Creative</c></p>
-            <p id="creative-clarification">Let’s make something new, different and more meaningful or make things more visual or conceptual!</p>
+            <p id="creative-clarification">Let’s work together and transform our ideas into meaningful solutions!</p>
         </div>
 
         {/* Displaying the links for social media */}

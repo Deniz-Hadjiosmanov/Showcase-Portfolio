@@ -30,12 +30,12 @@ function Projectsection() {
             <div className="card-text">
                 <div className="skills-used">
                     <div className="skill">
-                        <img src={DoubleDiamond} alt="Double Diamond"/>
-                        <p>Double Diamond</p>
+                        <img src={DoubleDiamond} alt="Double Diamond" className="skill-image"/>
+                        <p className="skill-text">Double Diamond</p>
                     </div>
                     <div className="skill">
-                        <img src={JavaScriptLogo} alt="JavaScript"/>
-                        <p>JavaScript</p>
+                        <img src={JavaScriptLogo} alt="JavaScript" className="skill-image"/>
+                        <p className="skill-text">JavaScript</p>
                     </div>
                 </div>
                 <div className="btn-container-see-the-project" href="https://github.com/Deniz-Hadjiosmanov/Petica">
@@ -51,12 +51,12 @@ function Projectsection() {
             <div className="card-text">
                 <div className="skills-used">
                     <div className="skill">
-                        <img src={Waterfall} alt="Waterfall-scrum-fall"/>
-                        <p>Water-scrum-fall</p>
+                        <img src={Waterfall} alt="Waterfall-scrum-fall" className="skill-image"/>
+                        <p className="skill-text">Water-scrum-fall</p>
                     </div>
                     <div className="skill">
-                        <img src={ReactLogo} alt="React"/>
-                        <p>React + Vite</p>
+                        <img src={ReactLogo} alt="React" className="skill-image"/>
+                        <p className="skill-text">React + Vite</p>
                     </div>
                 </div>
                 <div className="btn-container-see-the-project">
@@ -72,12 +72,12 @@ function Projectsection() {
             <div className="card-text">
                 <div className="skills-used">
                     <div className="skill">
-                        <img src={Waterfall} alt="Waterfall"/>
-                        <p>Waterfall</p>
+                        <img src={Waterfall} alt="Waterfall" className="skill-image"/>
+                        <p className="skill-text">Waterfall</p>
                     </div>
                     <div className="skill">
-                        <img src={JavaScriptLogo} alt="JavaScript"/>
-                        <p>JavaScript</p>
+                        <img src={JavaScriptLogo} alt="JavaScript" className="skill-image"/>
+                        <p className="skill-text">JavaScript</p>
                     </div>
                 </div>
                 <div className="btn-container-see-the-project">

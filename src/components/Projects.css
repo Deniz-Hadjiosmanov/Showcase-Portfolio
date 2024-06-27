@@ -119,3 +119,109 @@
 .btn-arrow {
     margin: 0 0 0 8px;
 }
+
+
+/* Responsive */
+
+@media screen and (max-width: 1440px) {
+
+    .project-card {
+        width: 360px;
+    }
+
+    .btn-container-see-the-project {
+        font-size: 13px;
+    }
+
+    .skill-image {
+        width: 27px;
+    }
+
+    .skill-text {
+        font-size: 14px
+    }
+
+    .project-title {
+        font-size: 18px;
+    }
+
+    .btn-arrow {
+        width: 18px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    .project-card {
+        width: 310px;
+    }
+
+    .btn-container-see-the-project {
+        font-size: 12px;
+        margin: 0 16px 12px 0;
+    }
+
+    .skills-used {
+        margin: 0 0 0 16px;
+    }
+
+    .skill-image {
+        width: 24px;
+    }
+
+    .skill-text {
+        font-size: 12px
+    }
+
+    .project-title {
+        font-size: 16px;
+        margin: 15px 0 12px 15px;
+    }
+
+    .btn-arrow {
+        width: 16px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+
+    #projects-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #project-section-titles {
+        align-self: center;
+        text-align: center;
+    }
+
+    .project-card {
+        width: 420px;
+    }
+
+    .project-title {
+        font-size: 20px;
+        margin: 15px 0 12px 30px;
+    }
+
+    .btn-container-see-the-project {
+        font-size: 15px;
+    }
+
+    .skill-image {
+        width: 30px;
+    }
+
+    .skill-text {
+        font-size: 16px
+    }
+
+    .skills-used {
+        margin: 0 0 0 30px;
+    }
+
+    .btn-arrow {
+        width: 18px;
+    }
+}
