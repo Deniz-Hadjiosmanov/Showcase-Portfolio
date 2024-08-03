@@ -18,8 +18,8 @@ function Projectsection() {
 
     <section id="project-section-container">
         <div id="project-section-titles">
-            <p className="sub-title">My Picks</p>
-            <p className="title">Projects</p>
+            <p className="sub-title" id="sub-title-projects">My Picks</p>
+            <p className="title" id="title-projects">Projects</p>
         </div>
 
         {/* Displaying the projects */}

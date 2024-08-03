@@ -15,13 +15,13 @@ function Aboutsection() {
         <div id="about-section-upper-row">
         <div id="about-section-titles">
             <p className="sub-title">My Skills</p>
-            <p className="title" id="about-title">Why Hire Me As Your Next <c>Intern</c></p>
+            <p className="title" id="about-title">What do I <c>bring</c> to the table?</p>
             <p className="sub-title" id="about-description">As a young professional, my goal is to be <c>versatile</c> and able to adapt quickly.</p>
         </div>
-        <div className="about-skill-box">
+        <div className="about-achievement-box">
             <img src={Cup} alt="Cup"/>
-            <p className="skill-box-title">User Interaction</p>
-            <p className="skill-box-text">In November 2022 I won <b>1st place</b> in a Human Interaction competition in TU/e.</p>
+            <p className="achievement-box-title">User Interaction</p>
+            <p className="achievement-box-text">In November 2022 I won <b>1st place</b> in a Human Interaction competition in TU/e.</p>
         </div>
         </div>
 
