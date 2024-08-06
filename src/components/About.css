@@ -139,3 +139,38 @@ c {
     }
 
 }
+
+/* @media screen and (max-width: 983px) {
+
+    .skill-box-text {
+        font-size: 18px;
+    }
+
+} */
+
+@media screen and (max-width: 1000px) {
+
+    #about-section-container {
+        gap: 100px;
+    }
+
+    #about-section-titles {
+        width: 100%;
+        text-align: center;
+    }
+
+    .skill-box-text {
+        font-size: 20px;
+    }
+
+    #about-section-upper-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about-section-bottom-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
