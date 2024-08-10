@@ -23,10 +23,11 @@
     background-image: url('../assets/Navigation.svg');
     background-repeat: no-repeat;
     background-position: right;
+    background-color: transparent;
     background-size: 530px 90px;
-  }
+}
   
-  .navbar div {
+.navbar div {
     color: var(--color-black);
     text-align: center;
     text-decoration: none;
@@ -35,41 +36,125 @@
     font-family: var(--font-epilogue);
     font-weight: bold;
     cursor: pointer;
-  }
+}
   
-  .navbar div:hover {
+.navbar div:hover {
     color: var(--color-white);
     border-color: transparent;
     transition: 0.4s;
-  }
+}
 
-  .navbar div.active {
+.navbar div.active {
     color: var(--color-white); 
     transition: 0.4s;
 }
 
-  #contact-navigation-btn {
+#contact-navigation-btn {
     margin-right: 80px;
-  }
+}
 
-  #container-my-logo {
+#container-my-logo {
     margin: 0 0 0 40px;
-  }
+}
 
-  #container-my-logo:hover {
+#container-my-logo:hover {
     -webkit-transform: scale(1.07);
     transform: scale(1.07);
-  }
+}
 
-  #container-nav-btns {
+#container-nav-btns {
     position: fixed;
     display: flex;
     flex-direction: row;
     gap: 44px;
     right: 0;
-  }
+}
 
-  #my-logo {
+#my-logo {
     width: 120px;
     height: auto;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 10px;
+}
+
+.bar {
+    display: block;
+    width: 1.5rem;
+    height: 0.2rem;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-black);
+}
+
+/* Hamburger active state */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    background-color: var(--color-yellow);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    background-color: var(--color-yellow);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 710px) {
+  .hamburger {
+    display: block;
+    flex: 0.09;
   }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: none;
+  }
+
+  #container-nav-btns {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-black);
+    text-align: center;
+    transition: right 0.3s ease-in-out; /* Adjust the transition for smooth slide-in */
+    z-index: 1;
+    justify-content: center;
+  }
+
+  #container-nav-btns.active {
+    right: 0; /* When active, the menu should slide in from the right */
+  }
+
+  #container-nav-btns div {
+    color: var(--color-white);
+    padding: 10px 0;
+    /* border-bottom: 1px solid var(--color-white); */
+  }
+
+  #container-nav-btns div.active {
+    color: var(--color-yellow);
+  }
+
+  #contact-navigation-btn {
+    margin-right: 0;
+  }
+
+  #container-my-logo {
+    margin: 0 0 0 20px;
+  }
+}
