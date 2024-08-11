@@ -126,3 +126,18 @@
     }
 
 }
+
+@media screen and (max-width: 520px) {
+
+    #creative {
+        font-size: 33px;
+        margin: 0 0 16px 0;
+    }
+
+    #creative-clarification {
+        font-size: 24px;
+        width: 340px;
+        line-height: 35px;
+    }
+
+}
