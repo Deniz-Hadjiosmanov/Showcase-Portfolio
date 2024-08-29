@@ -33,6 +33,34 @@ function Projectsection() {
 
             <div id="projects-container">
                 <div className="project-card">
+                    <img src={Bierens} alt="Bierens" id="bierens" />
+                    <p className="project-title">Referral Program</p>
+                    <div className="card-text">
+                        <div className="skills-used">
+                            <div className="skill">
+                                <img src={Waterfall} alt="Waterfall-scrum-fall" className="skill-image" />
+                                <p className="skill-text">Water-scrum-fall</p>
+                            </div>
+                            <div className="skill">
+                                <img src={ReactLogo} alt="React" className="skill-image" />
+                                <p className="skill-text" id="react-skill-image">React</p>
+                            </div>
+                        </div>
+                        <div className="btn-container-see-the-project" onMouseEnter={() => handleMouseEnter('bierens')} onMouseLeave={handleMouseLeave}>
+                            <p className="btn-see-the-project">
+                                See the project <img src={Arrow} alt="Arrow" className="btn-arrow" />
+                            </p>
+                            {hoveredProject === 'bierens' && (
+                                <div className="dropdown-menu" onMouseEnter={() => handleMouseEnter('bierens')} onMouseLeave={handleMouseLeave}>
+                                    <a href="https://dribbble.com/shots/24717729-Referral-System" target="_blank" className="dropdown-item"><img src={Dribbble} alt="Dribbble" id="dribbble-icon"/> Dribbble</a>
+                                    <a href="https://github.com/aleksandarafk/BierensReferralProgram" target="_blank" className="dropdown-item"><img src={GitHub} alt="GitHub" id="github-icon"/> GitHub</a>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+
+                <div className="project-card">
                     <img src={Petica} alt="Petica" id="petica" />
                     <p className="project-title">Digital Pet Suggestor</p>
                     <div className="card-text">
@@ -54,34 +82,6 @@ function Projectsection() {
                                 <div className="dropdown-menu" onMouseEnter={() => handleMouseEnter('petica')} onMouseLeave={handleMouseLeave}>
                                     <a href="https://dribbble.com/shots/24730614-Digital-Pet-Suggestor" target="_blank" className="dropdown-item"><img src={Dribbble} alt="Dribbble" id="dribbble-icon"/> Dribbble</a>
                                     <a href="https://github.com/Deniz-Hadjiosmanov/Petica" target="_blank" className="dropdown-item"><img src={GitHub} alt="GitHub" id="github-icon"/> GitHub</a>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-
-                <div className="project-card">
-                    <img src={Bierens} alt="Bierens" id="bierens" />
-                    <p className="project-title">Referral Program</p>
-                    <div className="card-text">
-                        <div className="skills-used">
-                            <div className="skill">
-                                <img src={Waterfall} alt="Waterfall-scrum-fall" className="skill-image" />
-                                <p className="skill-text">Water-scrum-fall</p>
-                            </div>
-                            <div className="skill">
-                                <img src={ReactLogo} alt="React" className="skill-image" />
-                                <p className="skill-text">React + Vite</p>
-                            </div>
-                        </div>
-                        <div className="btn-container-see-the-project" onMouseEnter={() => handleMouseEnter('bierens')} onMouseLeave={handleMouseLeave}>
-                            <p className="btn-see-the-project">
-                                See the project <img src={Arrow} alt="Arrow" className="btn-arrow" />
-                            </p>
-                            {hoveredProject === 'bierens' && (
-                                <div className="dropdown-menu" onMouseEnter={() => handleMouseEnter('bierens')} onMouseLeave={handleMouseLeave}>
-                                    <a href="https://dribbble.com/shots/24717729-Referral-System" target="_blank" className="dropdown-item"><img src={Dribbble} alt="Dribbble" id="dribbble-icon"/> Dribbble</a>
-                                    <a href="https://github.com/aleksandarafk/BierensReferralProgram" target="_blank" className="dropdown-item"><img src={GitHub} alt="GitHub" id="github-icon"/> GitHub</a>
                                 </div>
                             )}
                         </div>

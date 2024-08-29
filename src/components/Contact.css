@@ -86,14 +86,29 @@
     height: auto;
 }
 
+#linkedin-contact:hover {
+    opacity: 60%;
+    transition: 0.3s;
+}
+
 #dribbble-contact {
     width: 30px;
     height: auto;
 }
 
+#dribbble-contact:hover {
+    opacity: 60%;
+    transition: 0.3s;
+}
+
 #github-contact {
     width: 30px;
     height: auto;
+}
+
+#github-contact:hover {
+    opacity: 60%;
+    transition: 0.3s;
 }
 
 #instagram {

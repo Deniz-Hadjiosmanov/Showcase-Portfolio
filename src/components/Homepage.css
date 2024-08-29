@@ -36,7 +36,7 @@
 }
 
 .description-paragraph {
-    text-align: justify;
+    text-align: left;
     font-family: var(--font-epilogue);
     margin: 6px 0 6px 0;
 }
@@ -74,6 +74,11 @@
     font-family: var(--font-epilogue);
     font-weight: 600;
     cursor: pointer;
+}
+
+#see-my-work-button:hover {
+    color: var(--color-white);
+    transition: 0.4s;
 }
 
 
