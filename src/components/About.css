@@ -35,7 +35,7 @@
 
 #about-section-titles {
     width: 40%;
-    text-align: justify;
+    text-align: left;
 }
 
 .sub-title {
@@ -109,7 +109,7 @@ c {
 }
 
 .skill-box-text {
-    text-align: justify;
+    text-align: left;
 }
 
 

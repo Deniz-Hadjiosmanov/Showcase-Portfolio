@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './Projects.css';
 
 // Importing the necessary images
@@ -10,87 +10,114 @@ import JavaScriptLogo from '../assets/java-script-logo.svg';
 import ReactLogo from '../assets/react-logo.svg';
 import Waterfall from '../assets/waterfall.svg';
 import Arrow from '../assets/arrow-see-project.svg';
-
+import Dribbble from '../assets/dribbble.png';
+import GitHub from '../assets/github.png';
 
 function Projectsection() {
+    const [hoveredProject, setHoveredProject] = useState(null);
+
+    const handleMouseEnter = (projectId) => {
+        setHoveredProject(projectId);
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredProject(null);
+    };
+
     return (
-    <>
-
-    <section id="project-section-container">
-        <div id="project-section-titles">
-            <p className="sub-title" id="sub-title-projects">My Picks</p>
-            <p className="title" id="title-projects">Projects</p>
-        </div>
-
-        {/* Displaying the projects */}
-        <div id="projects-container">
-        <div className="project-card">
-            <img src={Petica} alt="Petica" id="petica"/>
-            <p className="project-title">Digital Pet Suggestor</p>
-            <div className="card-text">
-                <div className="skills-used">
-                    <div className="skill">
-                        <img src={DoubleDiamond} alt="Double Diamond" className="skill-image"/>
-                        <p className="skill-text">Double Diamond</p>
-                    </div>
-                    <div className="skill">
-                        <img src={JavaScriptLogo} alt="JavaScript" className="skill-image"/>
-                        <p className="skill-text">JavaScript</p>
-                    </div>
-                </div>
-                <div className="btn-container-see-the-project" href="https://github.com/Deniz-Hadjiosmanov/Petica">
-                    <a href="https://github.com/Deniz-Hadjiosmanov/Petica" target="blank" className="btn-see-the-project">See the project <img src={Arrow} alt="Arrow" className="btn-arrow"/></a>
-                </div>
-                
-            </div>
+        <section id="project-section-container">
+            <div id="project-section-titles">
+                <p className="sub-title" id="sub-title-projects">My Picks</p>
+                <p className="title" id="title-projects">Projects</p>
             </div>
 
-            <div className="project-card">
-            <img src={Bierens} alt="Bierens" id="petica"/>
-            <p className="project-title">Referral Program</p>
-            <div className="card-text">
-                <div className="skills-used">
-                    <div className="skill">
-                        <img src={Waterfall} alt="Waterfall-scrum-fall" className="skill-image"/>
-                        <p className="skill-text">Water-scrum-fall</p>
-                    </div>
-                    <div className="skill">
-                        <img src={ReactLogo} alt="React" className="skill-image"/>
-                        <p className="skill-text">React + Vite</p>
+            <div id="projects-container">
+                <div className="project-card">
+                    <img src={Petica} alt="Petica" id="petica" />
+                    <p className="project-title">Digital Pet Suggestor</p>
+                    <div className="card-text">
+                        <div className="skills-used">
+                            <div className="skill">
+                                <img src={DoubleDiamond} alt="Double Diamond" className="skill-image" />
+                                <p className="skill-text">Double Diamond</p>
+                            </div>
+                            <div className="skill">
+                                <img src={JavaScriptLogo} alt="JavaScript" className="skill-image" />
+                                <p className="skill-text">JavaScript</p>
+                            </div>
+                        </div>
+                        <div className="btn-container-see-the-project" onMouseEnter={() => handleMouseEnter('petica')} onMouseLeave={handleMouseLeave}>
+                            <p className="btn-see-the-project">
+                                See the project <img src={Arrow} alt="Arrow" className="btn-arrow" />
+                            </p>
+                            {hoveredProject === 'petica' && (
+                                <div className="dropdown-menu" onMouseEnter={() => handleMouseEnter('petica')} onMouseLeave={handleMouseLeave}>
+                                    <a href="https://dribbble.com/shots/24730614-Digital-Pet-Suggestor" target="_blank" className="dropdown-item"><img src={Dribbble} alt="Dribbble" id="dribbble-icon"/> Dribbble</a>
+                                    <a href="https://github.com/Deniz-Hadjiosmanov/Petica" target="_blank" className="dropdown-item"><img src={GitHub} alt="GitHub" id="github-icon"/> GitHub</a>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
-                <div className="btn-container-see-the-project">
-                <a href="https://github.com/aleksandarafk/BierensReferralProgram" target="blank" className="btn-see-the-project">See the project <img src={Arrow} alt="Arrow" className="btn-arrow"/></a>
-                </div>
-                
-            </div>
-            </div>
 
-            <div className="project-card">
-            <img src={Maike} alt="Singer" id="petica"/>
-            <p className="project-title">Promoting a Potential Singer</p>
-            <div className="card-text">
-                <div className="skills-used">
-                    <div className="skill">
-                        <img src={Waterfall} alt="Waterfall" className="skill-image"/>
-                        <p className="skill-text">Waterfall</p>
-                    </div>
-                    <div className="skill">
-                        <img src={JavaScriptLogo} alt="JavaScript" className="skill-image"/>
-                        <p className="skill-text">JavaScript</p>
+                <div className="project-card">
+                    <img src={Bierens} alt="Bierens" id="bierens" />
+                    <p className="project-title">Referral Program</p>
+                    <div className="card-text">
+                        <div className="skills-used">
+                            <div className="skill">
+                                <img src={Waterfall} alt="Waterfall-scrum-fall" className="skill-image" />
+                                <p className="skill-text">Water-scrum-fall</p>
+                            </div>
+                            <div className="skill">
+                                <img src={ReactLogo} alt="React" className="skill-image" />
+                                <p className="skill-text">React + Vite</p>
+                            </div>
+                        </div>
+                        <div className="btn-container-see-the-project" onMouseEnter={() => handleMouseEnter('bierens')} onMouseLeave={handleMouseLeave}>
+                            <p className="btn-see-the-project">
+                                See the project <img src={Arrow} alt="Arrow" className="btn-arrow" />
+                            </p>
+                            {hoveredProject === 'bierens' && (
+                                <div className="dropdown-menu" onMouseEnter={() => handleMouseEnter('bierens')} onMouseLeave={handleMouseLeave}>
+                                    <a href="https://dribbble.com/shots/24717729-Referral-System" target="_blank" className="dropdown-item"><img src={Dribbble} alt="Dribbble" id="dribbble-icon"/> Dribbble</a>
+                                    <a href="https://github.com/aleksandarafk/BierensReferralProgram" target="_blank" className="dropdown-item"><img src={GitHub} alt="GitHub" id="github-icon"/> GitHub</a>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
-                <div className="btn-container-see-the-project">
-                <a href="https://github.com/Deniz-Hadjiosmanov/Maaike-Girardin-s-Website" target="blank" className="btn-see-the-project">See the project <img src={Arrow} alt="Arrow" className="btn-arrow"/></a>  
+
+                <div className="project-card">
+                    <img src={Maike} alt="Maike" id="maike" />
+                    <p className="project-title">Promoting a Potential Singer</p>
+                    <div className="card-text">
+                        <div className="skills-used">
+                            <div className="skill">
+                                <img src={Waterfall} alt="Waterfall" className="skill-image" />
+                                <p className="skill-text">Waterfall</p>
+                            </div>
+                            <div className="skill">
+                                <img src={JavaScriptLogo} alt="JavaScript" className="skill-image" />
+                                <p className="skill-text">JavaScript</p>
+                            </div>
+                        </div>
+                        <div className="btn-container-see-the-project" onMouseEnter={() => handleMouseEnter('maike')} onMouseLeave={handleMouseLeave}>
+                            <p className="btn-see-the-project">
+                                See the project <img src={Arrow} alt="Arrow" className="btn-arrow" />
+                            </p>
+                            {hoveredProject === 'maike' && (
+                                <div className="dropdown-menu" onMouseEnter={() => handleMouseEnter('maike')} onMouseLeave={handleMouseLeave}>
+                                    <a href="https://dribbble.com/shots/24737404-Promoting-a-Potential-Singer" target="_blank" className="dropdown-item"><img src={Dribbble} alt="Dribbble" id="dribbble-icon"/> Dribbble</a>
+                                    <a href="https://github.com/Deniz-Hadjiosmanov/Maaike-Girardin-s-Website" target="_blank" className="dropdown-item"><img src={GitHub} alt="GitHub" id="github-icon"/> GitHub</a>
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </div>
-                
             </div>
-            </div>
-        </div>
-        
-    </section>
-    </>
-    )
+        </section>
+    );
 }
 
 export default Projectsection;

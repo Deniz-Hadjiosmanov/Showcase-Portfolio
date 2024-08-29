@@ -48,7 +48,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     gap: 56px;
 
 }
@@ -62,6 +63,12 @@
     gap: 30px;
 }
 
+.social-media-icons-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
 .copy-image {
     height: 27px;
     width: auto;
@@ -72,6 +79,21 @@
 .copy-image:hover {
     opacity: 60%;
     transition: 0.3s;
+}
+
+#linkedin-contact {
+    width: 30px;
+    height: auto;
+}
+
+#dribbble-contact {
+    width: 30px;
+    height: auto;
+}
+
+#github-contact {
+    width: 30px;
+    height: auto;
 }
 
 #instagram {

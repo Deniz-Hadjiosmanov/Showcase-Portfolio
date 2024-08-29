@@ -25,6 +25,7 @@
     background-position: right;
     background-color: transparent;
     background-size: 530px 90px;
+    z-index: 1;
 }
   
 .navbar div {
@@ -91,7 +92,7 @@
     background-color: var(--color-black);
 }
 
-/* Hamburger active state */
+/* Hamburger Menu */
 .hamburger.active .bar:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
     background-color: var(--color-yellow);
@@ -131,19 +132,18 @@
     flex-direction: column;
     background-color: var(--color-black);
     text-align: center;
-    transition: right 0.3s ease-in-out; /* Adjust the transition for smooth slide-in */
+    transition: right 0.3s ease-in-out;
     z-index: 1;
     justify-content: center;
   }
 
   #container-nav-btns.active {
-    right: 0; /* When active, the menu should slide in from the right */
+    right: 0;
   }
 
   #container-nav-btns div {
     color: var(--color-white);
     padding: 10px 0;
-    /* border-bottom: 1px solid var(--color-white); */
   }
 
   #container-nav-btns div.active {

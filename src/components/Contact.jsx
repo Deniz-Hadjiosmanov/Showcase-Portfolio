@@ -3,33 +3,24 @@ import './Contact.css';
 
 // Importing the necessary photos
 import Linkedin from '../assets/linkedin.png';
-import Email from '../assets/email.png';
-import Copy from '../assets/copy.png';
+import Dribbble from '../assets/dribbble.png';
+import GitHub from '../assets/github.png';
+import Email from '../assets/email.svg';
+import Copy from '../assets/copy.svg';
 import Footer from '../assets/footer.svg';
 
 function Contactsection() {
     const [popupVisible, setPopupVisible] = useState(false);
     const [popupMessage, setPopupMessage] = useState('');
 
-    // Setting the popup that is shown after copying the LinkedIn or the Email
+    // Setting the popup that is shown after copying the Email
     const showPopup = (message) => {
         setPopupMessage(message);
         setPopupVisible(true);
         setTimeout(() => {
             setPopupVisible(false);
-        }, 3000); // Show the popup for 3 seconds after copying the LinkedIn or the Email
+        }, 3000); // Show the popup for 3 seconds after copying the Email
     };
-
-    // Function for copying my LinkedIn URL
-    const copyLinkedIn = useCallback(() => {
-        navigator.clipboard.writeText("https://www.linkedin.com/in/deniz-hadjiosmanov-b1516122b/")
-            .then(() => {
-                showPopup('LinkedIn URL copied!');
-            })
-            .catch(err => {
-                console.error('LinkedIn not copied ', err); 
-            });
-    }, []);
 
     // Function for copying my Email
     const copyEmail = useCallback(() => {
@@ -52,17 +43,16 @@ function Contactsection() {
 
         {/* Displaying the links for social media */}
         <div id="social-media-container">
-            <div className="social-media-box">
-                <img src={Linkedin} alt="Linkedin"/>
-                <p>Deniz Hadjiosmanov</p>
-                <img src={Copy} alt="Copy" className="copy-image" onClick={copyLinkedIn}/>
-            </div>
-
-            <div className="social-media-box">
+        <div className="social-media-box">
                 <img src={Email} alt="Email"/>
                 <p>denl.gx@gmail.com</p>
                 <img src={Copy} alt="Copy" className="copy-image" onClick={copyEmail}/>
-            </div>
+        </div>
+        <div className="social-media-icons-wrapper">
+        <a href="https://www.linkedin.com/in/deniz-hadjiosmanov-b1516122b/" target="_blank"><img src={Linkedin} alt="LinkedIn" id="linkedin-contact"/></a>
+        <a href="https://dribbble.com/deniz16" target="_blank"><img src={Dribbble} alt="Dribbble" id="dribbble-contact"/></a>
+        <a href="https://github.com/Deniz-Hadjiosmanov" target="_blank"><img src={GitHub} alt="GitHub" id="github-contact"/></a>
+        </div>
         </div>
 
         <img src={Footer} alt="Footer" id="footer"/>

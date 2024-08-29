@@ -87,21 +87,24 @@
 }
 
 .btn-container-see-the-project {
+    position: relative;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
+    align-self: flex-end;
     gap: 12px;
     border-bottom: var(--color-yellow) solid 1px;
     margin: 0 22px 12px 0;
     cursor: pointer;
 }
 
-.btn-container-see-the-project:hover {
+/* .btn-container-see-the-project:hover {
     -webkit-transform: scale(1.07);
     transform: scale(1.07);
     transition: 0.4s;
-}
+} */
 
 .btn-see-the-project {
     align-self: flex-end;
@@ -118,6 +121,48 @@
 
 .btn-arrow {
     margin: 0 0 0 8px;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    background-color: var(--color-white);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    min-width: 160px;
+    border-radius: 4px;
+    margin-top: 5px;
+    padding: 8px 0;
+}
+
+.dropdown-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px 16px;
+    color: var(--color-black);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: var(--color-black);
+}
+
+#dribbble-icon {
+    width: 30px;
+    height: auto;
+}
+
+#github-icon {
+    width: 30px;
+    height: auto;
 }
 
 
@@ -300,7 +345,8 @@
 
     .btn-container-see-the-project {
         width: 60%;
-        margin: 19px 0 12px 0;
+        margin: 0 0 12px 0;
+        align-self: center;
     }
 
 }
