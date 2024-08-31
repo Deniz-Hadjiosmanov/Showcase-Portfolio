@@ -20,6 +20,14 @@
     align-items: center;
     background-color: #F5FCFF;
     height: 100vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out; /* animation duration */
+}
+
+#home-background.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #Home-page-description {
@@ -27,7 +35,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 42vw;
 }
 
 #Deniz-photo {

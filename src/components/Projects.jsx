@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import './Projects.css';
 
 // Importing the necessary images
@@ -15,6 +15,8 @@ import GitHub from '../assets/github.png';
 
 function Projectsection() {
     const [hoveredProject, setHoveredProject] = useState(null);
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const projectSectionRef = useRef(null);
 
     const handleMouseEnter = (projectId) => {
         setHoveredProject(projectId);
@@ -24,8 +26,34 @@ function Projectsection() {
         setHoveredProject(null);
     };
 
+    // Smooth animation for the Projects section
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0];
+                if (entry.isIntersecting && !hasAnimated) {
+                    setHasAnimated(true);
+                    observer.disconnect(); // Execute the animation only once - the first time when the user scrolls to/opens the Projects section
+                }
+            },
+            {
+                threshold: 0.1,
+            }
+        );
+
+        if (projectSectionRef.current) {
+            observer.observe(projectSectionRef.current);
+        }
+
+        return () => {
+            if (projectSectionRef.current) {
+                observer.unobserve(projectSectionRef.current);
+            }
+        };
+    }, [hasAnimated]);
+
     return (
-        <section id="project-section-container">
+        <section id="project-section-container" ref={projectSectionRef} className={hasAnimated ? 'visible' : ''}>
             <div id="project-section-titles">
                 <p className="sub-title" id="sub-title-projects">My Picks</p>
                 <p className="title" id="title-projects">Projects</p>

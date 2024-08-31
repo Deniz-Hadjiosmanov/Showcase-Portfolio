@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import './About.css';
 
 // Importing the necessary photos
@@ -9,9 +9,38 @@ import WebDevelopment from "../assets/web-development.png";
 import MediaProduction from "../assets/media-production.png";
 
 function Aboutsection() {
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const aboutSectionRef = useRef(null);
+
+    // Smooth animation for the About section
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0];
+                if (entry.isIntersecting && !hasAnimated) {
+                    setHasAnimated(true);
+                    observer.disconnect(); // Execute the animation only once - the first time when the user scrolls to/opens the About section
+                }
+            },
+            {
+                threshold: 0.1,
+            }
+        );
+
+        if (aboutSectionRef.current) {
+            observer.observe(aboutSectionRef.current);
+        }
+
+        return () => {
+            if (aboutSectionRef.current) {
+                observer.unobserve(aboutSectionRef.current);
+            }
+        };
+    }, [hasAnimated]);
+
     return (
     <>
-    <section id="about-section-container">
+    <section id="about-section-container" ref={aboutSectionRef} className={hasAnimated ? 'visible' : ''}>
         <div id="about-section-upper-row">
         <div id="about-section-titles">
             <p className="sub-title">My Skills</p>

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import './Contact.css';
 
 // Importing the necessary photos
@@ -11,7 +11,8 @@ import Footer from '../assets/footer.svg';
 
 function Contactsection() {
     const [popupVisible, setPopupVisible] = useState(false);
-    const [popupMessage, setPopupMessage] = useState('');
+    const [popupMessage, setPopupMessage] = useState('');const [hasAnimated, setHasAnimated] = useState(false);
+    const contactSectionRef = useRef(null);
 
     // Setting the popup that is shown after copying the Email
     const showPopup = (message) => {
@@ -33,9 +34,35 @@ function Contactsection() {
             });
     }, []);
 
+    // Smooth animation for the Contact section
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0];
+                if (entry.isIntersecting && !hasAnimated) {
+                    setHasAnimated(true);
+                    observer.disconnect(); // Execute the animation only once - the first time when the user scrolls to/opens the Contact section
+                }
+            },
+            {
+                threshold: 0.1,
+            }
+        );
+
+        if (contactSectionRef.current) {
+            observer.observe(contactSectionRef.current);
+        }
+
+        return () => {
+            if (contactSectionRef.current) {
+                observer.unobserve(contactSectionRef.current);
+            }
+        };
+    }, [hasAnimated]);
+
     return (
     <>
-    <section id="contact-section-container">
+    <section id="contact-section-container" ref={contactSectionRef} className={hasAnimated ? 'visible' : ''}>
         <div id="contact-titles-container">
             <p id="creative">Let’s Go <c>Creative</c></p>
             <p id="creative-clarification">Let’s work together and transform our ideas into meaningful solutions!</p>
@@ -55,7 +82,7 @@ function Contactsection() {
         </div>
         </div>
 
-        <img src={Footer} alt="Footer" id="footer"/>
+        
 
         {popupVisible && (
             <div className="popup">
@@ -63,6 +90,8 @@ function Contactsection() {
             </div>
         )}
     </section>
+
+    <img src={Footer} alt="Footer" id="footer"/>
     </>
     )
 }
