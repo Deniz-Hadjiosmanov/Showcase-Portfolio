@@ -44,7 +44,7 @@ function Aboutsection() {
         <div id="about-section-upper-row">
         <div id="about-section-titles">
             <p className="sub-title">My Skills</p>
-            <p className="title" id="about-title">What's in it for <c>you</c>?</p>
+            <p className="title" id="about-title">What is my <c>added value</c>?</p>
             <p className="sub-title" id="about-description">As a young professional, my goal is to be <c>versatile</c> and able to adapt quickly.</p>
         </div>
         <div className="about-achievement-box">
@@ -70,7 +70,7 @@ function Aboutsection() {
             <div className="about-skill-box">
                 <img src={WebDevelopment} alt="Cup"/>
                 <p className="skill-box-title">Web Development</p>
-                <p className="skill-box-text">Component-based development and working with various React libraries.</p>
+                <p className="skill-box-text">Component-based development and working with various libraries.</p>
             </div>
             <div className="about-skill-box">
                 <img src={MediaProduction} alt="Cup"/>
