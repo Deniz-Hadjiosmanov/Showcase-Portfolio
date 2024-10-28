@@ -46,6 +46,7 @@
     text-align: left;
     font-family: var(--font-epilogue);
     margin: 6px 0 6px 0;
+    color: var(--color-black);
 }
 
 #I-am-deniz {
@@ -81,6 +82,7 @@
     font-family: var(--font-epilogue);
     font-weight: 600;
     cursor: pointer;
+    color: var(--color-black);
 }
 
 #see-my-work-button:hover {

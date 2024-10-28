@@ -72,7 +72,7 @@ function Contactsection() {
         <div id="social-media-container">
         <div className="social-media-box">
                 <img src={Email} alt="Email"/>
-                <p>denl.gx@gmail.com</p>
+                <p id="text-email">denl.gx@gmail.com</p>
                 <img src={Copy} alt="Copy" className="copy-image" onClick={copyEmail}/>
         </div>
         <div className="social-media-icons-wrapper">
