@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PortfolioLogo from '../assets/portfolio-website-logo.svg';
+import PortfolioLogo from '../assets/deniz_logo.png';
 import './Navigationbar.css';
 
 function NavigationBar() {
