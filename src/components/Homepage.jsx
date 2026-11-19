@@ -44,7 +44,7 @@ function Homesection() {
             <div id="Home-page-description">
                 <p className="description-paragraph" id="I-am-deniz">Hey, my name is Deniz</p>
                 <p className="description-paragraph" id="I-am-uxui-designer">I am a <c id="UXUI-designer">UX/UI designer</c></p>
-                <p className="description-paragraph" id="my-descriptioon">A 22-year-old ICT & Media Design student with a passion for design and creating digital products.</p>
+                <p className="description-paragraph" id="my-descriptioon">A 24-year-old young professional who also has understanding of Front-end development, Data analysis & Machine learning. Besides designing, I participate in the whole product development & management process.</p>
                 <div id="see-my-work-button" onClick={scrollToProjects}>See my work</div>
             </div>
         </div>

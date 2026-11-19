@@ -77,8 +77,6 @@ function Contactsection() {
         </div>
         <div className="social-media-icons-wrapper">
         <a href="https://www.linkedin.com/in/deniz-hadjiosmanov-b1516122b/" target="_blank"><img src={Linkedin} alt="LinkedIn" id="linkedin-contact"/></a>
-        <a href="https://dribbble.com/deniz16" target="_blank"><img src={Dribbble} alt="Dribbble" id="dribbble-contact"/></a>
-        <a href="https://github.com/Deniz-Hadjiosmanov" target="_blank"><img src={GitHub} alt="GitHub" id="github-contact"/></a>
         </div>
         </div>
 

@@ -3,11 +3,14 @@ import './Projects.css';
 
 // Importing the necessary images
 import Petica from '../assets/petica.svg';
+import JohanSports from '../assets/johan-sports.svg';
+import NS from '../assets/NS.jpg';
 import Maike from '../assets/maike.svg';
 import Bierens from '../assets/bierens.svg';
 import DoubleDiamond from '../assets/double-diamond.svg';
 import JavaScriptLogo from '../assets/java-script-logo.svg';
 import ReactLogo from '../assets/react-logo.svg';
+import MachineLearningLogo from '../assets/machine-learning.svg';
 import Waterfall from '../assets/waterfall.svg';
 import Arrow from '../assets/arrow-see-project.svg';
 import Dribbble from '../assets/dribbble.png';
@@ -57,40 +60,13 @@ function Projectsection() {
             <div id="project-section-titles">
                 <p className="sub-title" id="sub-title-projects">My Picks</p>
                 <p className="title" id="title-projects">Projects</p>
+                <p className="sub-title" id="card-clarification">Each card below shows what working method I followed for the project and what other skill I used besides my UX/UI expertise.</p>
             </div>
 
             <div id="projects-container">
                 <div className="project-card">
-                    <img src={Bierens} alt="Bierens" id="bierens" />
-                    <p className="project-title">Referral Program</p>
-                    <div className="card-text">
-                        <div className="skills-used">
-                            <div className="skill">
-                                <img src={Waterfall} alt="Waterfall-scrum-fall" className="skill-image" />
-                                <p className="skill-text">Water-scrum-fall</p>
-                            </div>
-                            <div className="skill">
-                                <img src={ReactLogo} alt="React" className="skill-image" />
-                                <p className="skill-text" id="react-skill-image">React</p>
-                            </div>
-                        </div>
-                        <div className="btn-container-see-the-project" onMouseEnter={() => handleMouseEnter('bierens')} onMouseLeave={handleMouseLeave}>
-                            <p className="btn-see-the-project">
-                                See the project <img src={Arrow} alt="Arrow" className="btn-arrow" />
-                            </p>
-                            {hoveredProject === 'bierens' && (
-                                <div className="dropdown-menu" onMouseEnter={() => handleMouseEnter('bierens')} onMouseLeave={handleMouseLeave}>
-                                    <a href="https://dribbble.com/shots/24717729-Referral-System" target="_blank" className="dropdown-item"><img src={Dribbble} alt="Dribbble" id="dribbble-icon"/> Dribbble</a>
-                                    <a href="https://github.com/aleksandarafk/BierensReferralProgram" target="_blank" className="dropdown-item"><img src={GitHub} alt="GitHub" id="github-icon"/> GitHub</a>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-
-                <div className="project-card">
-                    <img src={Petica} alt="Petica" id="petica" />
-                    <p className="project-title">Digital Pet Suggestor</p>
+                    <img src={NS} alt="NS" className="project-image" />
+                    <p className="project-title">Transparency for Bike Travellers</p>
                     <div className="card-text">
                         <div className="skills-used">
                             <div className="skill">
@@ -98,49 +74,59 @@ function Projectsection() {
                                 <p className="skill-text">Double Diamond</p>
                             </div>
                             <div className="skill">
-                                <img src={JavaScriptLogo} alt="JavaScript" className="skill-image" />
-                                <p className="skill-text">JavaScript</p>
+                                <img src={MachineLearningLogo} alt="JavaScript" className="skill-image" />
+                                <p className="skill-text">Machine learning</p>
                             </div>
                         </div>
-                        <div className="btn-container-see-the-project" onMouseEnter={() => handleMouseEnter('petica')} onMouseLeave={handleMouseLeave}>
-                            <p className="btn-see-the-project">
-                                See the project <img src={Arrow} alt="Arrow" className="btn-arrow" />
-                            </p>
-                            {hoveredProject === 'petica' && (
-                                <div className="dropdown-menu" onMouseEnter={() => handleMouseEnter('petica')} onMouseLeave={handleMouseLeave}>
-                                    <a href="https://dribbble.com/shots/24730614-Digital-Pet-Suggestor" target="_blank" className="dropdown-item"><img src={Dribbble} alt="Dribbble" id="dribbble-icon"/> Dribbble</a>
-                                    <a href="https://github.com/Deniz-Hadjiosmanov/Petica" target="_blank" className="dropdown-item"><img src={GitHub} alt="GitHub" id="github-icon"/> GitHub</a>
-                                </div>
-                            )}
-                        </div>
+                        <a href="https://app.notion.com/p/Transparency-in-Journey-Planning-of-Bike-Travellers-416cb78ccebe8052a77bc2d247e2269f?source=copy_link" target="_blank" className="btn-container-see-the-project">
+                           <p className="btn-see-the-project">
+                               See the project <img src={Arrow} alt="Arrow" className="btn-arrow" />
+                           </p>
+                        </a>
                     </div>
                 </div>
 
                 <div className="project-card">
-                    <img src={Maike} alt="Maike" id="maike" />
-                    <p className="project-title">Promoting a Potential Singer</p>
+                    <img src={JohanSports} alt="Johan Sports" className="project-image" />
+                    <p className="project-title">Train or Play - Do it Your Way</p>
                     <div className="card-text">
                         <div className="skills-used">
                             <div className="skill">
-                                <img src={Waterfall} alt="Waterfall" className="skill-image" />
-                                <p className="skill-text">Waterfall</p>
+                                <img src={Waterfall} alt="Waterfall-Agile hybrid" className="skill-image" />
+                                <p className="skill-text" id="waterfall-agile-hybrid-text">Waterfall-Agile hybrid</p>
                             </div>
                             <div className="skill">
-                                <img src={JavaScriptLogo} alt="JavaScript" className="skill-image" />
-                                <p className="skill-text">JavaScript</p>
+                                <img src={ReactLogo} alt="JavaScript" className="skill-image" />
+                                <p className="skill-text">Front-end</p>
                             </div>
                         </div>
-                        <div className="btn-container-see-the-project" onMouseEnter={() => handleMouseEnter('maike')} onMouseLeave={handleMouseLeave}>
-                            <p className="btn-see-the-project">
-                                See the project <img src={Arrow} alt="Arrow" className="btn-arrow" />
-                            </p>
-                            {hoveredProject === 'maike' && (
-                                <div className="dropdown-menu" onMouseEnter={() => handleMouseEnter('maike')} onMouseLeave={handleMouseLeave}>
-                                    <a href="https://dribbble.com/shots/24737404-Promoting-a-Potential-Singer" target="_blank" className="dropdown-item"><img src={Dribbble} alt="Dribbble" id="dribbble-icon"/> Dribbble</a>
-                                    <a href="https://github.com/Deniz-Hadjiosmanov/Maaike-Girardin-s-Website" target="_blank" className="dropdown-item"><img src={GitHub} alt="GitHub" id="github-icon"/> GitHub</a>
-                                </div>
-                            )}
+                        <a href="https://app.notion.com/p/One-App-for-Team-and-Individual-Activities-41dcb78ccebe807eb688d1d00bc31b28?source=copy_link" target="_blank" className="btn-container-see-the-project">
+                           <p className="btn-see-the-project">
+                               See the project <img src={Arrow} alt="Arrow" className="btn-arrow" />
+                           </p>
+                        </a>
+                    </div>
+                </div>
+
+                <div className="project-card">
+                    <img src={Bierens} alt="Bierens" className="project-image" id="bierens" />
+                    <p className="project-title">Referral Program</p>
+                    <div className="card-text">
+                        <div className="skills-used">
+                            <div className="skill">
+                                <img src={Waterfall} alt="Waterfall-scrum-fall" className="skill-image" />
+                                <p className="skill-text" id="waterfall-agile-hybrid-text">Waterfall-Agile hybrid</p>
+                            </div>
+                            <div className="skill">
+                                <img src={ReactLogo} alt="React" className="skill-image" />
+                                <p className="skill-text" id="react-skill-image">Front-end</p>
+                            </div>
                         </div>
+                        <a href="https://app.notion.com/p/Referral-System-419cb78ccebe805d95cede0ae1857edc?source=copy_link" target="_blank" className="btn-container-see-the-project">
+                           <p className="btn-see-the-project">
+                               See the project <img src={Arrow} alt="Arrow" className="btn-arrow" />
+                           </p>
+                        </a>
                     </div>
                 </div>
             </div>
