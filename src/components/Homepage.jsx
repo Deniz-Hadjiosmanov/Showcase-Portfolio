@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import './Homepage.css';
-import DenizPhoto from '../assets/Deniz-photo.svg';
+import DenizPhoto from '../assets/deniz.svg';
 
 function Homesection() {
     const [hasAnimated, setHasAnimated] = useState(false);
